@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TruGanic | Domain</title>
+    <meta
+      name="description"
+      content="Domain details of the TruGanic research project including literature survey, research gap, objectives, methodology, and technologies."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a href="./index.html" class="brand">TruGanic</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+        >
+          Menu
+        </button>
+        <ul class="nav-links" id="primary-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./domain.html">Domain</a></li>
+          <li><a href="./milestones.html">Milestones</a></li>
+          <li><a href="./documents.html">Documents</a></li>
+          <li><a href="./presentations.html">Presentations</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="domain-hero section-spacing">
+        <div class="container domain-hero-layout">
+          <div class="domain-hero-content">
+            <p class="eyebrow">Domain</p>
+            <h1 class="domain-title">Project Domain Overview</h1>
+            <p class="domain-intro">
+              This page presents a complete domain-level view of the TruGanic
+              research, covering how existing knowledge shaped the solution and
+              why the proposed architecture is needed in real organic food
+              supply chains from farm evidence to the buyer. It briefly ties
+              source data, logistics continuity, readable provenance, and
+              security so you can see how those pieces belong in one system
+              before the sections below expand each part. It explains the
+              literature survey outcomes, the
+              detailed <a href="#research-gap">research gap</a>, the core
+              <a href="#research-problem">research problem</a>, the
+              <a href="#research-objectives">objective</a> structure, the
+              implementation <a href="#methodology">methodology</a>, and the
+              <a href="#technologies-used">technology stack</a> used to deliver
+              a secure and production-ready system. You can also start from the
+              <a href="#literature-survey">literature survey</a> section.
+            </p>
+            <a href="#literature-survey" class="btn-primary">Explore Domain</a>
+          </div>
+          <div class="domain-hero-visual" aria-label="Domain hero image">
+            <img
+              class="domain-hero-image"
+              src="./assets/images/DomainHero.png"
+              alt="Digital analysis view of an organic produce sample"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-spacing domain-sections">
+        <div class="container domain-flow">
+          <article class="domain-row" id="literature-survey">
+            <div class="domain-text">
+              <h2>Literature Survey</h2>
+              <p>
+                Existing research confirms that blockchain can improve
+                traceability in agri-food systems by offering immutability,
+                shared visibility, and stronger provenance verification across
+                farmers, certifiers, logistics agents, and retailers. However,
+                review studies also emphasize that blockchain alone does not
+                guarantee trustworthy data input, especially at the farming
+                stage where manual submissions and sensor streams may contain
+                anomalies or inconsistencies. This has led recent work to
+                integrate machine learning based validation as an upstream
+                screening mechanism, particularly using anomaly detection
+                techniques to identify suspicious soil behavior before final
+                traceability claims are accepted.
+              </p>
+              <p>
+                The literature also highlights major logistics constraints in
+                real deployments. Field and transport environments often face
+                unstable connectivity, making continuous online syncing
+                unrealistic. Local-first and offline-first approaches are
+                therefore recommended to preserve data capture continuity and
+                later synchronization with integrity checks. At the consumer
+                layer, studies show that raw ledger records are too technical
+                for public trust decisions. AR-based visualization has emerged
+                as a practical method to convert technical provenance into
+                understandable quality indicators. Security-oriented studies
+                further support Zero Trust adoption in blockchain-backed
+                platforms so no system component is blindly trusted after
+                compromise, reinforcing trustworthy organic claims end-to-end.
+              </p>
+            </div>
+          </article>
+
+          <article class="domain-row" id="research-gap">
+            <div class="domain-text">
+              <h2>Research Gap</h2>
+              <p>
+                The literature shows good progress in individual areas, but
+                there is still no widely adopted framework that connects all
+                critical layers in one practical and secure organic traceability
+                flow. Current systems often solve one part well while leaving
+                major operational and trust gaps in other stages.
+              </p>
+              <p>
+                A key gap appears at the source-data layer. Even when
+                blockchain is used, most implementations still trust submitted
+                values without enough intelligent screening before permanent
+                recording. This creates a quality-risk gap where immutable
+                records can still preserve poor or suspicious data. In organic
+                supply chains, this problem is critical because certification
+                decisions depend on early-stage farm evidence and handling
+                conditions that must be credible, not only tamper-resistant.
+              </p>
+              <p>
+                Another major gap is operational resilience across transport
+                environments. Many existing solutions assume stable
+                connectivity, while real logistics routes often include rural
+                and low-signal regions. Without robust offline-first behavior,
+                systems risk incomplete event histories, delayed logging, and
+                inconsistent cold-chain monitoring records. This weakens the
+                end-to-end continuity expected in trustworthy traceability.
+              </p>
+              <p>
+                A further gap exists in consumer communication and trust
+                interpretation. Although provenance data may be available on
+                blockchain, most platforms provide technical logs that are
+                difficult for non-technical users to understand. There is
+                limited implementation of user-friendly insight layers that
+                translate raw records into clear quality indicators, confidence
+                levels, and actionable trust signals at the point of purchase.
+              </p>
+              <p>
+                Security integration is also underdeveloped. Current work rarely
+                embeds a formal Zero Trust security architecture across all
+                modules of blockchain-backed traceability. In practice, this
+                means systems may still over-trust internal components, devices,
+                or services after compromise. The identified gap is therefore
+                not only functional integration, but also security-by-design
+                integration that continuously verifies identities, data states,
+                and transaction legitimacy before trust is granted.
+              </p>
+              <ul class="domain-list">
+                <li>
+                  <strong>Data credibility gap:</strong> Blockchain keeps records
+                  immutable, but most systems still depend on unverified input
+                  data from farm-level sources.
+                </li>
+                <li>
+                  <strong>Logistics continuity gap:</strong> Many solutions assume
+                  stable internet and do not provide robust offline-first
+                  capture with integrity validation during transport.
+                </li>
+                <li>
+                  <strong>Consumer interpretability gap:</strong> Provenance logs
+                  are often too technical, and only a few systems convert them
+                  into simple trust indicators for end users.
+                </li>
+                <li>
+                  <strong>Integration gap:</strong> Anomaly detection, offline
+                  synchronization, and AR communication are mostly implemented
+                  separately instead of in one end-to-end architecture.
+                </li>
+                <li>
+                  <strong>Security architecture gap:</strong> Explicit Zero Trust
+                  integration in blockchain-backed traceability remains limited,
+                  especially for handling compromised components without blindly
+                  trusting organic claims.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="domain-row" id="research-problem">
+            <div class="domain-text">
+              <h2>Research Problem</h2>
+              <p>
+                Traditional systems struggle to assure trustworthy data at
+                source, maintain records during connectivity disruptions, and
+                present traceability evidence in a simple form users can trust.
+              </p>
+              <p>
+                The core research problem is the absence of a practical
+                end-to-end mechanism that can maintain trust integrity from farm
+                to consumer in real-world organic food supply chains.
+                Conventional solutions typically focus on record storage but do
+                not adequately validate data quality before entry, do not handle
+                transport-stage network instability reliably, and do not present
+                provenance results in a user-friendly decision format.
+              </p>
+              <p>
+                At the farming stage, the problem is how to identify suspicious
+                soil behavior and possible data mismatches before records become
+                trusted evidence. At the logistics stage, the problem is how to
+                ensure uninterrupted event capture and verifiable integrity when
+                mobile connectivity is intermittent. At the consumer stage, the
+                problem is how to transform technical blockchain outputs into
+                understandable quality and trust indicators that can support
+                purchase decisions.
+              </p>
+              <p>
+                In addition, there is a security problem across the entire flow:
+                systems often assume internal components are trustworthy after
+                initial authentication. For blockchain-backed organic
+                traceability, this is insufficient. The research therefore
+                addresses how to integrate Zero Trust principles so trust is
+                continuously verified, and organic claims are not blindly
+                accepted when any subsystem may be compromised.
+              </p>
+            </div>
+          </article>
+
+          <article class="domain-row" id="research-objectives">
+            <div class="domain-text">
+              <h2>Research Objectives</h2>
+              <p>
+                The objective of this research is to design and validate a
+                practical, production-ready framework that improves trust,
+                continuity, and interpretability in organic food traceability.
+                The system is built to operate under real field constraints and
+                security risks while maintaining reliable evidence from source
+                to consumer.
+              </p>
+              <ul class="domain-list">
+                <li>
+                  Develop a farm-stage anomaly detection mechanism to identify
+                  suspicious soil patterns before blockchain recording.
+                </li>
+                <li>
+                  Implement an offline-first logistics workflow that preserves
+                  transport records during network loss and synchronizes them
+                  with integrity verification.
+                </li>
+                <li>
+                  Build an Insight Engine that converts technical provenance
+                  data into clear, consumer-friendly trust indicators.
+                </li>
+                <li>
+                  Provide an AR-based visualization layer for intuitive access
+                  to batch-level traceability details at the point of purchase.
+                </li>
+                <li>
+                  Integrate Zero Trust security controls into the
+                  blockchain-backed architecture to avoid blind trust in
+                  compromised components.
+                </li>
+                <li>
+                  Evaluate the framework for anomaly detection quality,
+                  logistics continuity, integrity assurance, and user
+                  interpretability.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="domain-row" id="methodology">
+            <div class="domain-text">
+              <h2>Methodology</h2>
+              <p>
+                The methodology follows an end-to-end pipeline with
+                research-driven modules from the paper and security controls
+                from the TruGanic platform implementation. The flow is organized
+                into farm intelligence, logistics resilience, consumer insight,
+                and Zero Trust enforcement across all API interactions.
+              </p>
+              <p>
+                <strong>1) Farm-stage anomaly intelligence:</strong> Soil
+                readings (N, P, K, EC) from farmer input and sensor streams are
+                ingested at fixed intervals, transformed with delta-based
+                features, and screened using an Isolation Forest model. Instead
+                of immediate punitive action, flagged anomalies are
+                cross-referenced with contextual logs before recording
+                traceability-relevant outputs on chain.
+              </p>
+              <p>
+                <strong>2) Offline-first logistics continuity:</strong>
+                Transport events and environmental readings are captured in a
+                mobile workflow that supports local caching during connectivity
+                loss. Records are queued and synchronized when network access is
+                restored. A Merkle-root based integrity step is used to verify
+                that offline-captured trip data has not been altered before
+                final ledger anchoring.
+              </p>
+              <p>
+                <strong>3) Consumer insight and AR communication:</strong>
+                Blockchain batch records are processed by an insight service to
+                generate understandable indicators such as freshness,
+                cold-chain compliance, organic quality, and overall trust score.
+                These outputs are delivered to a QR-triggered AR interface so
+                users can interpret provenance evidence in a practical visual
+                form rather than raw technical logs.
+              </p>
+              <p>
+                <strong>4) Zero Trust security architecture (repo-backed):</strong>
+                At the platform edge, TruGanic enforces a gateway-based Zero
+                Trust model using DID and Verifiable Credentials for
+                client/agent authentication and authorization. Each request is
+                verified with signature, nonce, timestamp, and VC permission
+                checks before reaching downstream services. Inside domain
+                services, JWT is used for user-level session context, creating a
+                layered model where Zero Trust controls client-to-platform
+                access and JWT controls user-to-resource access.
+              </p>
+              <p>
+                This combined methodology ensures that traceability is not only
+                immutable but also context-validated, connectivity-resilient,
+                user-interpretable, and continuously verified under compromised
+                component assumptions.
+              </p>
+            </div>
+          </article>
+
+          <article class="domain-row" id="technologies-used">
+            <div class="domain-text">
+              <h2>Technologies Used</h2>
+              <p>
+                The solution combines blockchain infrastructure, AI-driven data
+                validation, offline-capable mobile components, and layered
+                security services to support a production-ready traceability
+                pipeline.
+              </p>
+              <ul class="domain-list">
+                <li>
+                  <strong>Blockchain and storage:</strong> Hyperledger Fabric
+                  (permissioned ledger), CouchDB (state queries), and IPFS
+                  (off-chain content addressing).
+                </li>
+                <li>
+                  <strong>AI and anomaly analytics:</strong> Isolation Forest
+                  model with delta-based feature engineering for soil anomaly
+                  screening (NPK/EC patterns).
+                </li>
+                <li>
+                  <strong>Backend services:</strong> FastAPI-based insight and
+                  processing services, plus Node.js/TypeScript microservices in
+                  the TruGanic platform core.
+                </li>
+                <li>
+                  <strong>Offline transport layer:</strong> SQLite-backed local
+                  caching and delayed synchronization workflow with integrity
+                  verification.
+                </li>
+                <li>
+                  <strong>Zero Trust security stack:</strong> DID resolution,
+                  Verifiable Credential issuance/verification, policy-based
+                  authorization, nonce/timestamp replay protection, and audit
+                  logging at the gateway-security layer.
+                </li>
+                <li>
+                  <strong>User and visualization layer:</strong> Unity +
+                  Vuforia for AR-based consumer presentation of trust and
+                  provenance indicators.
+                </li>
+                <li>
+                  <strong>Supporting infrastructure:</strong> PostgreSQL and
+                  Redis for service data, caching, and operational support in
+                  platform services.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 TruGanic. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+
