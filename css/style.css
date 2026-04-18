@@ -521,6 +521,23 @@ p {
   justify-content: center;
 }
 
+/* Index-style blob hero; tuned for wide domain photo */
+.domain-hero .blob {
+  width: min(100%, 36rem);
+  min-height: 28rem;
+}
+
+.domain-hero .hero-person {
+  width: min(128%, 40rem);
+  bottom: 0;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.domain-hero .hero-person-pop {
+  clip-path: inset(0 0 52% 0);
+}
+
 .domain-hero-blob {
   width: min(100%, 32rem);
   min-height: 22rem;
@@ -535,17 +552,6 @@ p {
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
-}
-
-.domain-hero-visual > .domain-hero-image {
-  display: block;
-  width: min(100%, 42rem);
-  max-height: min(78vh, 36rem);
-  height: auto;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 1px solid rgba(45, 45, 45, 0.08);
-  box-shadow: 0 2px 12px rgba(45, 45, 45, 0.05);
 }
 
 .domain-sections {
@@ -1118,6 +1124,10 @@ p {
 
   .hero-person {
     width: min(152%, 36rem);
+  }
+
+  .domain-hero .hero-person {
+    width: min(118%, 34rem);
   }
 
   .hero--presentations .hero-person {
